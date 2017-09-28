@@ -1,0 +1,12 @@
+8753f5b0555208893dd973c314aea155 *DESCRIPTION
+0621522301ebcd07ecda112c7e27b568 *LICENSE
+f397df6e9ca80cefc5ba1cac1a10ec8a *NAMESPACE
+a6661404504bdab80e39ade653b056c3 *NEWS.md
+b85f1cbba76c89d837f7b76f4ae1a7ba *R/cat_cont.R
+19e08cb4a598c3e9b1723a3b177bd5ae *R/is.R
+58089884cddf35c1eef355afa5609571 *R/which.R
+763ed3fea851d4be8132e43f4f017a86 *R/zzz.R
+6f1595f6ef5d330fcf0278d99cab0b1f *README.md
+5b54e4cc89c846c584755d6b5feb0663 *man/catcont.Rd
+fbcd49a756a8e0b2fdc4930691cfb728 *tests/testthat.R
+7dc7a39988115a1da2e946f6a48a94f7 *tests/testthat/test-catcont.r
