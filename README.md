@@ -2,13 +2,15 @@
 
 **Test For and Identify Categorical or Continuous Values**
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/catcont)](https://cran.r-project.org/package=catcont)
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/catcont)](https://cran.r-project.org/package=catcont)
+[![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
 
-Methods and utilities for classifying vectors as categorical 
-or continuos. Methods is_cat() and is_cont() test for categorical and 
-continous values respectively. Functions which_cat(), which_cont() and 
-cat_cont() identify them within recursive objects.
+This collection of methods and utilities allows for a working with
+vectors at a higher level abstraction, i.e. by whether they are 
+categorical (nominal)  or continous. The functions allow for testing, 
+identifying, selecting, mutating,etc. and work with  both 
+atomic vectors and recursive objects (table and list-like) objects in a 
+tidyverse compliant way.
 
 
 ## Installation
@@ -44,11 +46,32 @@ You can install catcont from github with:
     is_cont( Sys.Date() )    # TRUE
     is_cont( complex(1,2) )  # TRUE
      
+    
+     
 ### Identification 
 
+    # Atomic 
+    cat_cont(1:10)
+    cat_cont(letters)
+     
+    # Recursive 
+    cat_cont(iris)
+     
     which_cat(iris)
     which_cat( iris, names=TRUE )
       
     which_cont(iris)
     which_cont( iris, names=TRUE )
+
+   
  
+### Selection 
+
+    iris %>% select_cat()
+    iris %>% select_cont()
+    
+    
+### Mutation 
+
+    iris %>% mutate_if_cat(...)
+    iris %>% mutate_if_cont(...)
